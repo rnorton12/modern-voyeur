@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    var myWebCams = document.getElementById("myVideo").autoplay;
+
+    var randomCam = Math.floor(Math.random() * myWebCams.length);
+
     var maxLimit = 50;
     var myOffset = 0;
 
@@ -138,4 +143,18 @@ $(document).ready(function () {
         console.log("myOffset: " + myOffset);
         queryWebCamList(countryCode, myOffset, maxLimit);
     });
+
+    function makeNewThumbnail() {
+
+        $(".thumbnail").empty();
+
+        for(var i = 0; i < myWebCams.length; i++) {
+    
+            var newThumbnail = $("<img>");
+            newThumbnail.addClass("");
+            newThumbnail.text(webCam[i]);
+            $(".thumbnail").append(newThumbnail);
+
+   }}; 
+
 });
