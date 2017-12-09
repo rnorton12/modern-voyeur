@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebCam</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-success">
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <!-- page heading goes here -->
+            <div class="row my-5">
+                <div class="col-md-12 text-center">
+                    <span id="heading"></span>
+                </div>
+            </div>
+
+            <!-- item buttons go here -->
+            <div class="row mb-5">
+                <div class="col-md-12 text-left">
+                    <div id="buttons"></div>
+                </div>
+            </div>
+
+            <!-- define the user input form -->
+            <form>
+                <div class="form-row align-items-left">
+                    <div class="col-sm-3">
+                        <label class="sr-only" for="new-item">Enter a search term</label>
+                        <input type="text" class="form-control mb-2 mb-sm-0" id="new-item" placeholder="">
+                    </div>
+                    <div class="col-auto">
+                        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- "back" and "next" button go here -->
+            <div class="row my-5">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-info back" id="back-button" type="button">Back</button>
+                    <button class="btn btn-info next" id="next-button" type="button">Next</button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 class="modal-title bg-success" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close-modal btn-primary" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body bg-success">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-12 text-center expanded-gif"></div>
+                                    <div class="col-md-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-success">
+                            <button type="button" class="btn btn-primary close-modal" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- the GIFs retrieved go here -->
+            <div class="row mb-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 text-center">
+                    <div id="gifs"></div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <!-- the page footer goes here -->
+            <div class="row">
+                <div class="col-md-12 footer bg-muted text-center text-muted">
+                    <span>© 2017: Roy Norton</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascripts go here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
+
+</body>
+
+</html>
